@@ -41,11 +41,11 @@ namespace StockExchangeDelegate
 
                     Console.WriteLine($"NAME: {stock.Name} \tVALUE: {newValue}\tDATE: {startDate}");
 
-                    foreach (var item in stock.ValueOverTime)
-                    {
-                        Console.WriteLine($"NAME: {stock.Name} \tVALUE: {item.value}\tDATE: {item.date}");
+                    //foreach (var item in stock.ValueOverTime)
+                    //{
+                    //    Console.WriteLine($"NAME: {stock.Name} \tVALUE: {item.value}\tDATE: {item.date}");
 
-                    }
+                    //}
 
                     if (previousValue.HasValue && newValue <= previousValue * 0.98)
                     {

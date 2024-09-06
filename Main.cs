@@ -28,8 +28,7 @@ namespace StockExchangeDelegate
             while (loop)
             {
                 startDate.AddDays(1);
-                double stockValue = rand.Next(90, 120);
-
+            
                 foreach (var stock in _dataInit._stocks)
                 {
 
@@ -40,12 +39,6 @@ namespace StockExchangeDelegate
                     stock.ValueOverTime.Enqueue(stockInformation);
 
                     Console.WriteLine($"NAME: {stock.Name} \tVALUE: {newValue}\tDATE: {startDate}");
-
-                    //foreach (var item in stock.ValueOverTime)
-                    //{
-                    //    Console.WriteLine($"NAME: {stock.Name} \tVALUE: {item.value}\tDATE: {item.date}");
-
-                    //}
 
                     if (previousValue.HasValue && newValue <= previousValue * 0.98)
                     {
